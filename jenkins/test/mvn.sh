@@ -5,5 +5,5 @@ echo "** Testing the code ***********"
 echo "***************************"
 WORKSPACE=/home/ubuntu/jenkin_home/jobs/maven/workspace
 
-docker run --rm  -v  $WORKSPACE/java-app/app -v /root/.m2/:/root/.m2/ -w /app maven:3-alpine "$@"
+docker run --rm  -v  $WORKSPACE/java-app:/app -v /root/.m2/:/root/.m2/ -w /app maven:3-alpine "$@"
 
