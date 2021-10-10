@@ -2,10 +2,6 @@ pipeline {
 
     agent any
     
-#    environment {
-#        PASS = credentials('registry-pass') 
-#    }
-
     stages {
 
         stage('Build') {
@@ -15,13 +11,6 @@ pipeline {
                     ./jenkins/build/build.sh
 
                 '''
-#            }
-#
-#            post {
-#                success {
-#                   archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true
-#                }
-#            }
         }
 
         stage('Test') {
